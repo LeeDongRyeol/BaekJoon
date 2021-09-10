@@ -5,6 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * 
+ * @author dyl1912
+ *
+ * 백준 : 1806번 부분합
+ * https://www.acmicpc.net/problem/1806
+ */
+
 public class PartSum {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
