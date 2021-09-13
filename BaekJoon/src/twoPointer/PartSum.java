@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * 
  * @author dyl1912
  *
- * ¹éÁØ : 1806¹ø ºÎºÐÇÕ
+ * ë°±ì¤€ : 1806ë²ˆ ë¶€ë¶„í•©
  * https://www.acmicpc.net/problem/1806
  */
 
