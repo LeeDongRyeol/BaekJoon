@@ -13,6 +13,7 @@ import java.util.Stack;
  * https://www.acmicpc.net/problem/10799
  */
 
+
 public class P10799_IronPole {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
