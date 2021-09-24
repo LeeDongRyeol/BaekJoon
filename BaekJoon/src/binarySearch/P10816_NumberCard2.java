@@ -12,6 +12,13 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * 
+ * @author dyl1912
+ * https://www.acmicpc.net/problem/10816
+ * 백준 10816 숫자 카드2 이분탐색
+ */
+
 public class P10816_NumberCard2 {
 	public static void main(String[] args) throws IOException {
 		P10816_NumberCard2 T = new P10816_NumberCard2();
@@ -33,45 +40,40 @@ public class P10816_NumberCard2 {
 		st = new StringTokenizer(br.readLine(), " ");
 		for (int i = 0; i < m; i++) {
 			arr[i] = stoi(st.nextToken());
-		}
-		
-		for(int x : T.solution(card, n, arr, m)) {
-			bw.write(x + " ");
+			
+			int idx = returnRt(card, arr[i]) - returnLt(card, arr[i]);
+			bw.write(idx + " ");
 		}
 		
 		bw.flush();
 	}
 	
-	public static int[] solution(int[] card, int n, int[] arr, int m) {
-		int[] answer = new int[m];
+	public static int returnLt(int[] card, int key) {
+		int lt = 0;
+		int rt = card.length;
 		
-		for (int i = 0; i < m; i++) {
-			int lt = 0, rt = n - 1;
-			int num = arr[i];
-			
-			while(lt <= rt) {
-				int mid = (lt + rt) / 2;
-				if(num == card[mid]) {
-					answer[i] = count(card, num);
-					break;
-				} else if(num > card[mid]) lt = mid + 1;
-				else rt = mid - 1;
-			}
+		while(lt < rt) {
+			int mid = (lt + rt) / 2;
+			if(key <= card[mid]) {
+				rt = mid;
+			} else lt = mid + 1;
 		}
 		
-		return answer;
+		return lt;
 	}
 	
-	public static int count(int[] card, int num) {
-		int cnt = Arrays.asList(card, num).size();
+	public static int returnRt(int[] card, int key) {
+		int lt = 0;
+		int rt = card.length;
 		
-//		int cnt = 0;
-//		
-//		for(int x : card) {
-//			if(x == num) cnt++;
-//		}
+		while(lt < rt) {
+			int mid = (lt + rt) / 2;
+			if(key < card[mid]) {
+				rt = mid;
+			} else lt = mid + 1;
+		}
 		
-		return cnt;
+		return rt;
 	}
 	
 	public static int stoi(String str) {
