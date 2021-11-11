@@ -2,7 +2,7 @@ package sort;
 
 /**
  * 	https://www.acmicpc.net/problem/10867
- *  Áßº¹ »©°í Á¤·ÄÇÏ±â
+ *  ì¤‘ë³µ ë¹¼ê³  ì •ë ¬í•˜ê¸°
  */
 
 import java.io.BufferedReader;
