@@ -2,7 +2,7 @@ package queue;
 
 /**
  *  https://www.acmicpc.net/problem/10845
- *  ť
+ *  큐
  */
 
 import java.io.BufferedReader;
