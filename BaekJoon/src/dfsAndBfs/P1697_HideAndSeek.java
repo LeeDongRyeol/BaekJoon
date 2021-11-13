@@ -38,14 +38,14 @@ public class P1697_HideAndSeek {
 			
 			for (int i = 1; i <= 3; i++) {
 				int moveVal = move(cur.loc, i);
-				if(cur.loc < sister && moveVal < cur.loc) continue;
-				if(cur.loc > sister && moveVal > cur.loc) continue;
 				
 				if(moveVal > 100000 || moveVal < 0) continue;
 				
 				if(visit[moveVal]) continue;
 				
 				Pos temp = new Pos(moveVal, cur.cnt + 1);
+				
+//				System.out.println("출발 위치 : " + cur.loc + ", 옮긴 위치 : " + temp.loc + ", 카운트 : " + temp.cnt);
 				
 				visit[temp.loc] = true;
 				
